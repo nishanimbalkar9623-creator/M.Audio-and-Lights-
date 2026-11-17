@@ -8,18 +8,13 @@ const LogoIntro = ({ onComplete }) => {
   const animFrameRef = useRef(null)
 
   useEffect(() => {
-    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
-    if (prefersReducedMotion) {
-      onComplete()
-      return
-    }
-
     const canvas = canvasRef.current
     const ctx = canvas.getContext('2d')
     const logo = new Image()
     logo.src = `${import.meta.env.BASE_URL}logo.png`
 
     logo.onload = () => {
+      setShowText(true)
       const dpr = Math.min(window.devicePixelRatio || 1, 2)
       const vw = window.innerWidth
       const vh = window.innerHeight
@@ -128,7 +123,6 @@ const LogoIntro = ({ onComplete }) => {
           ctx.globalAlpha = 1
         } else if (elapsed < HOLD_END) {
           // Phase 2 — full M with soft white glow
-          if (!showText) setShowText(true)
           const glow = Math.min(1, (elapsed - ASSEMBLE_END) / 400)
           const g = ctx.createRadialGradient(centerX, centerY, size * 0.15, centerX, centerY, size * 0.85)
           g.addColorStop(0, `rgba(255,255,255,${0.10 * glow})`)

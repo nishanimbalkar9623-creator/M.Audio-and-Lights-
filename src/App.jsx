@@ -13,16 +13,8 @@ function App() {
   const [introComplete, setIntroComplete] = useState(false)
   const [activeSection, setActiveSection] = useState('home')
 
-  useEffect(() => {
-    const hasPlayed = sessionStorage.getItem('introPlayed')
-    if (hasPlayed) {
-      setIntroComplete(true)
-    }
-  }, [])
-
   const handleIntroComplete = () => {
     setIntroComplete(true)
-    sessionStorage.setItem('introPlayed', 'true')
   }
 
   // Track active section
