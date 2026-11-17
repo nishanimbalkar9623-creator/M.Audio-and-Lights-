@@ -46,8 +46,14 @@
 
 .logo-intro__logo {
   width: clamp(110px, 24vw, 220px);
+  aspect-ratio: 1;
   height: auto;
   display: block;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 50%;
+  clip-path: circle(50%);
+  background: #000000;
   image-rendering: pixelated;
 }
 
