@@ -1,0 +1,148 @@
+.gallery__header {
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.gallery__header .section-label {
+  justify-content: center;
+}
+
+.gallery__header .section-description {
+  margin: 0 auto;
+}
+
+/* Single-row marquee ticker running right to left */
+.gallery__marquee {
+  position: relative;
+  overflow: hidden;
+  background: #0a0a0a;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+}
+
+.gallery__marquee-track {
+  display: flex;
+  gap: 60px;
+  white-space: nowrap;
+  will-change: transform;
+}
+
+.gallery__marquee-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 18px;
+  padding: 10px 0;
+  white-space: nowrap;
+  transform-style: preserve-3d;
+  transition: transform 0.4s ease;
+}
+
+.gallery__marquee-item img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 6px;
+  border: 1px solid var(--border);
+  flex-shrink: 0;
+  transition: transform 0.4s ease, border-color 0.3s ease;
+}
+
+.gallery__marquee-item:hover {
+  transform: rotateY(10deg) rotateX(6deg) scale(1.04);
+}
+
+.gallery__marquee-item:hover img {
+  border-color: white;
+}
+
+.gallery__marquee-overlay {
+  display: flex;
+  align-items: center;
+}
+
+.gallery__marquee-title {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  letter-spacing: 2px;
+  color: white;
+}
+
+.gallery__marquee-item:hover img {
+  transform: scale(1.05);
+  border-color: white;
+}
+
+.gallery__marquee-item:hover .gallery__marquee-title {
+  color: white;
+}
+
+/* Lightbox */
+.gallery__lightbox {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.95);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  padding: 40px;
+}
+
+.gallery__lightbox-content {
+  position: relative;
+  max-width: 900px;
+  width: 100%;
+}
+
+.gallery__lightbox-content img {
+  width: 100%;
+  max-height: 70vh;
+  object-fit: contain;
+  border-radius: 8px;
+  border: 1px solid #1a1a1a;
+}
+
+.gallery__lightbox-info {
+  margin-top: 16px;
+  text-align: center;
+}
+
+.gallery__lightbox-info h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.gallery__lightbox-close {
+  position: absolute;
+  top: -40px;
+  right: 0;
+  font-size: 1.5rem;
+  color: #a0a0a0;
+  transition: color 0.3s ease;
+}
+
+.gallery__lightbox-close:hover {
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .gallery__marquee-item img {
+    width: 80px;
+    height: 80px;
+  }
+
+  .gallery__marquee-item {
+    gap: 12px;
+  }
+
+  .gallery__marquee-title {
+    font-size: 0.9rem;
+  }
+
+  .gallery__marquee-track {
+    gap: 40px;
+  }
+}

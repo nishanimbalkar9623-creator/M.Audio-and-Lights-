@@ -1,0 +1,113 @@
+.services__header {
+  text-align: center;
+  margin-bottom: 56px;
+}
+
+.services__header .section-label {
+  justify-content: center;
+}
+
+.services__header .section-description {
+  margin: 0 auto;
+}
+
+/* Block / grid pattern */
+.services__grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 16px;
+}
+
+.service-block {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 20px;
+  min-height: 140px;
+  padding: 24px;
+  background: #0a0a0a;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  overflow: hidden;
+  cursor: default;
+  transform-style: preserve-3d;
+  transition: transform 0.35s ease, border-color 0.3s ease, background 0.3s ease, box-shadow 0.35s ease;
+}
+
+.service-block::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: white;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s ease;
+}
+
+.service-block:hover {
+  transform: translateY(-8px) rotateX(6deg) rotateY(-4deg);
+  border-color: white;
+  background: #111111;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.55);
+}
+
+.service-block:hover::after {
+  transform: scaleX(1);
+}
+
+.service-block__number {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  letter-spacing: 2px;
+  color: #555555;
+  transition: color 0.3s ease;
+}
+
+.service-block:hover .service-block__number {
+  color: white;
+}
+
+.service-block__text {
+  font-size: 1.05rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #a0a0a0;
+  transition: color 0.3s ease;
+}
+
+.service-block:hover .service-block__text {
+  color: white;
+}
+
+@media (max-width: 1200px) {
+  .services__grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (max-width: 968px) {
+  .services__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .services__grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+
+  .service-block {
+    min-height: 120px;
+    padding: 18px;
+  }
+
+  .service-block__text {
+    font-size: 0.85rem;
+  }
+}

@@ -1,0 +1,598 @@
+# TASK: Create a 2-Second Pixelated Logo Intro Animation
+
+Implement a premium 2-second animated logo introduction for our existing event production website.
+
+IMPORTANT: Use my uploaded business logo image as the exact source asset. Do not redesign, redraw, replace or distort the logo.
+
+### Animation Timeline
+
+used folder ai images 
+
+**0–0.8 seconds: Pixel Reveal**
+- Start with a pure black background (#050505).
+- Reveal the uploaded logo using a pixel-by-pixel animation.
+- Pixels should assemble into the actual logo.
+- Use small white square particles and subtle digital glitch effects.
+- Keep the animation elegant and professional.
+
+**0.8–1.5 seconds: Logo Appearance**
+- Display the complete logo in the center.
+- Add a subtle white glow and soft blue rim lighting.
+- Fade in small uppercase text below:
+
+AUDIO & LIGHTS
+
+- Use clean, modern typography with letter spacing.
+
+**1.5–2.0 seconds: Homepage Transition**
+- Add a subtle blue light sweep.
+- Smoothly fade the logo and intro background.
+- Reveal the existing website hero section.
+
+### Design Requirements
+- Background: #050505.
+- Logo: exact original uploaded asset.
+- Text: white.
+- Accent: #0050FF and #00D6FF.
+- Premium cinematic digital aesthetic.
+- No excessive glitch effects.
+- No unnecessary text or additional logos.
+
+### Technical Requirements
+- Implement using React and CSS animations or Framer Motion.
+- Keep the intro duration approximately 2 seconds.
+- Run only once per page load.
+- Do not repeat when navigating between homepage sections.
+- Ensure responsive behavior on desktop and mobile.
+- Avoid blocking the homepage from loading.
+- Optimize for performance.
+- Respect reduced-motion accessibility preferences.
+- Do not autoplay any audio.
+
+### IMPORTANT
+Inspect the existing website before implementation.
+
+Do not modify the existing hero animation, 30-frame image sequence, navigation or other website sections.
+
+The intro should be a separate overlay component that transitions into the existing homepage.
+
+Test the complete experience from initial page load through the transition.          
+
+# TASK: Integrate 30-Frame Cinematic Scroll Animation into Website Hero
+
+Act as a senior creative frontend developer specializing in premium websites, Next.js, React, GSAP, Framer Motion and HTML5 Canvas.
+
+I have already generated a cinematic DJ controller video and converted it into 30 individual image frames.
+
+Your task is to integrate these 30 frames into the existing website's hero section.
+
+## 1. FIRST: Inspect the Existing Project
+- Understand the current framework and folder structure.
+- Locate all 30 extracted hero images.
+- Identify their actual filenames and image formats.
+- Check the existing homepage and hero component.
+- Do not recreate the website.
+- Do not modify unrelated sections or existing functionality.
+
+## 2. HERO ANIMATION
+
+Implement a scroll-controlled image sequence using HTML5 Canvas.
+
+Requirements:
+- Display all 30 frames in their correct order.
+- Frame 1 should appear when the hero loads.
+- As the user scrolls down, advance through the frames.
+- At the end of the scroll animation, display frame 30.
+- Scrolling upward should reverse the animation.
+- Use smooth interpolation between scroll progress and frame selection.
+- Keep the canvas sticky while the animation plays.
+- Use approximately 300vh of scroll space for the animation.
+
+## 3. VISUAL DESIGN
+
+Follow our premium event production design:
+
+Background: #050505
+Secondary: #0A0A0C
+Accent: #0050FF
+Highlight: #00D6FF
+
+The images are portrait format (9:16).
+
+Important:
+- Preserve the original aspect ratio.
+- Never stretch or distort images.
+- Use object-fit: contain or equivalent canvas scaling.
+- Keep the equipment centered.
+- Maintain a seamless black background.
+- Add subtle cinematic lighting and blue ambient glow around the equipment.
+
+## 4. HERO TEXT OVERLAY
+
+At the beginning:
+
+Headline:
+"Engineering Experiences.
+Creating Moments."
+
+Supporting text:
+"Professional sound, lighting and visual production for extraordinary events."
+
+Primary CTA:
+"Explore Our Services"
+
+Secondary CTA:
+"View Our Work"
+
+As scrolling progresses:
+- Fade out the introductory text.
+- Introduce small technical labels.
+- Display "Precision Sound Engineering".
+- Display "Advanced Audio Technology".
+- Display "Built for Extraordinary Events".
+
+At the final frame:
+Show:
+"Technology Behind Every Experience."
+
+## 5. PERFORMANCE OPTIMIZATION
+
+This is extremely important.
+
+- Preload the 30 images.
+- Avoid loading all images repeatedly.
+- Use requestAnimationFrame for canvas rendering.
+- Optimize canvas resolution for desktop and mobile.
+- Avoid unnecessary React re-renders.
+- Prevent layout shifts.
+- Add a loading indicator until the first frame is ready.
+- Provide a fallback image if frames fail to load.
+- Support reduced-motion accessibility preferences.
+- Ensure smooth scrolling on low-end devices.
+
+## 6. RESPONSIVE DESIGN
+
+Desktop:
+- Large cinematic equipment visualization.
+- Text positioned around the equipment.
+- Full-screen sticky animation.
+
+Mobile:
+- Equipment centered.
+- Text displayed above or below the equipment.
+- Preserve portrait image composition.
+- Reduce unnecessary animation workload.
+
+## 7. IMPORTANT DEVELOPMENT RULES
+
+- Use the existing project architecture.
+- Reuse existing dependencies where possible.
+- Do not install unnecessary packages.
+- Do not replace existing website styling.
+- Do not invent additional image frames.
+- Do not use the original MP4 as the primary animation.
+- Use the actual 30 extracted images.
+- Keep the implementation clean and maintainable.
+
+## 8. FINAL TESTING
+
+After implementation:
+1. Verify all 30 images load.
+2. Verify frame ordering.
+3. Test scrolling forward and backward.
+4. Test desktop and mobile.
+5. Check image cropping and background blending.
+6. Check performance and console errors.
+7. Report modified files and any remaining issues.
+
+First inspect the project and identify the image directory. Then implement the animation without disturbing the existing website.
+
+
+
+# MASTER PROMPT — PROFESSIONAL EVENT PRODUCTION WEBSITE
+
+## 1. PROJECT OVERVIEW
+
+Build a premium, modern, cinematic, fully responsive website for an event production and technical services company.
+
+The website must communicate professionalism, technical expertise, reliability, and high-quality event production.
+
+The website should work as a digital business portfolio where potential clients can:
+
+- Understand the company's services.
+- Explore available equipment.
+- View previous event work.
+- Understand the company's capabilities.
+- Build trust in the business.
+- Contact the company for event bookings and enquiries.
+
+**Important:** This is an event production and technical services business, not simply an event management or wedding-planning company.
+
+## 2. BUSINESS INFORMATION
+
+- Company Name: XYZ
+- Location: Navi Mumbai, Maharashtra, India
+- Experience: 5–10 years
+- Business Type: Event Production and Technical Services
+
+### Main Services
+
+1. Professional Sound Systems and Speakers
+2. DJ Systems and Audio Setup
+3. Stage Production and Event Lighting
+4. Microphones and Conference Audio Systems
+5. LED Walls and Digital Displays
+6. Technical Operators and Event Supervision
+
+### Target Customers
+
+- Corporate conferences and business events
+- Navratri celebrations
+- Ganesh festival events
+- Pre-wedding functions
+- Live concerts and musical events
+- Private and social events
+
+### Business Capabilities
+
+The company owns and provides professional event equipment, including speakers, sound systems, DJ equipment, LED walls, lighting equipment, microphones, and other technical production equipment.
+
+The company also provides technical operators and on-site supervision to ensure smooth event execution.
+
+Do not invent company achievements, client names, testimonials, certifications, or statistics.
+
+## 3. DESIGN AND VISUAL DIRECTION
+
+Use [https://zexvro.in/#home](https://zexvro.in/#home) as a UI/UX inspiration reference.
+
+Study its:
+
+- Overall layout and visual hierarchy.
+- Navigation experience.
+- Typography.
+- Hero section.
+- Spacing and transitions.
+- Premium visual presentation.
+- Section organization.
+
+Create an original website inspired by its design quality. Do not copy its source code, branding, or exact layout.
+
+### Design Theme
+
+- Background: Deep black (#050505).
+- Secondary colors: Dark charcoal and subtle grey.
+- Accent colors: Controlled white and professional lighting-inspired highlights.
+- Typography: Modern, premium, bold and readable.
+- Style: Cinematic, minimal, luxury-tech aesthetic.
+- Animations: Smooth, professional and performance-friendly.
+
+Use high-quality event production photography and video assets.
+
+Avoid excessive gradients, unnecessary glowing effects, cluttered layouts, and generic templates.
+
+## 4. LOGO INTRODUCTION ANIMATION
+
+Implement a premium 2-second animated logo introduction.
+
+Use the exact uploaded company logo as the source asset.
+
+Do not redraw, redesign, replace, distort, or change the logo.
+
+### Animation Timeline
+
+**0–0.8 seconds: Pixel Reveal**
+
+- Start with a pure black background (#050505).
+- Reveal the original logo using a pixel-by-pixel animation.
+- Use small square pixel blocks.
+- Pixels should gradually assemble into the original logo.
+- Add subtle light particles and controlled illumination.
+
+**0.8–1.5 seconds: Logo Reveal**
+
+- Complete the logo formation.
+- Add subtle cinematic lighting.
+- Use soft reflections and a professional light sweep.
+- Keep the logo sharp and proportional.
+
+**1.5–2 seconds: Brand Introduction**
+
+- Display the company name.
+- Show a short professional tagline.
+- Add subtle background lighting.
+- Transition smoothly into the homepage hero section.
+
+###
+
+The animation must be optimized and should not delay access to the website.
+
+## 5. WEBSITE STRUCTURE
+
+### PAGE 1 — HOME
+
+The homepage must immediately communicate what the company does.
+
+**Hero Section**
+
+- Full-screen cinematic background video.
+- Professional event production visuals.
+- Speakers, LED walls, stage lighting and live events.
+- Dark overlay for text readability.
+- Strong headline.
+- Short business description.
+- Primary CTA: Explore Our Services.
+- Secondary CTA: Contact Us.
+
+Suggested headline:
+
+"POWERING EXPERIENCES. CREATING IMPACT."
+
+Suggested description:
+
+"Professional sound, lighting, LED displays and complete technical production solutions for unforgettable events."
+
+Add subtle scroll animations and smooth transitions.
+
+### PAGE 2 — ABOUT US
+
+Explain:
+
+- Company introduction.
+- 5–10 years of experience.
+- Technical expertise.
+- Equipment availability.
+- Professional operators.
+- Commitment to reliable event execution.
+
+Keep the language simple and business-oriented.
+
+### PAGE 3 — OUR SERVICES
+
+Create individual service sections or cards for:
+
+1. Sound Systems and Speakers
+2. DJ Systems
+3. Stage and Event Lighting
+4. Conference Audio and Microphones
+5. LED Walls and Displays
+6. Technical Operators and Supervision
+
+Each service must include:
+
+- High-quality relevant image.
+- Service title.
+- Short explanation.
+- Key capabilities.
+- Professional visual presentation.
+
+### PAGE 4 — OUR EQUIPMENT
+
+Showcase the equipment available through the business.
+
+Include categories such as:
+
+- Professional speakers.
+- Audio equipment.
+- DJ systems.
+- Stage lighting.
+- LED displays.
+- Microphones.
+- Supporting technical equipment.
+
+Use large images and premium product-style layouts.
+
+Do not invent equipment brands or specifications.
+
+### PAGE 5 — OUR EVENTS / GALLERY
+
+Create an attractive visual gallery showcasing different types of events.
+
+Include:
+
+- Corporate conferences.
+- Navratri events.
+- Ganesh festival events.
+- Pre-wedding functions.
+- Concerts.
+- Stage and lighting setups.
+
+Use image grids, cinematic video sections and interactive gallery previews.
+
+Use real business photographs when provided. Do not present stock images as actual company projects.
+
+### PAGE 6 — WHY CHOOSE US
+
+Highlight the business advantages:
+
+- 5–10 years of experience.
+- Professional equipment availability.
+- Complete technical production support.
+- Skilled technical operators.
+- Multiple event categories.
+- On-site supervision.
+- Reliable event execution.
+
+### PAGE 7 — CONTACT US
+
+Create a professional contact section.
+
+Include:
+
+- Company name.
+- Navi Mumbai location.
+- WhatsApp contact button.
+- Phone number placeholder.
+- Email placeholder.
+- Google Maps location placeholder.
+- Event enquiry form.
+
+The enquiry form should collect:
+
+- Customer name.
+- Phone number.
+- Event type.
+- Event date.
+- Event location.
+- Required services.
+- Additional requirements.
+
+Do not invent contact details. Keep missing information configurable.
+
+## 6. NAVIGATION
+
+Create a clean, responsive navigation bar.
+
+Navigation items:
+
+- Home
+- About
+- Services
+- Equipment
+- Gallery
+- Contact
+
+Include:
+
+- Company logo.
+- Smooth scrolling.
+- Active section indicator.
+- Mobile navigation menu.
+- Contact/Booking CTA.
+
+## 7. HERO VIDEO IMPLEMENTATION
+
+Use the uploaded generated event-production video and available extracted frames from the project assets.
+
+The hero section must:
+
+- Play the video seamlessly.
+- Use autoplay, muted and loop where supported.
+- Use object-fit: cover.
+- Maintain the correct aspect ratio.
+- Include a dark overlay.
+- Work on desktop and mobile.
+- Provide a poster/fallback image.
+- Avoid layout shifts and unnecessary loading delays.
+
+Use the supplied video as the visual source. Do not replace it with unrelated stock footage.
+
+## 8. ANIMATION AND INTERACTION
+
+Implement:
+
+- Smooth page transitions where appropriate.
+- Scroll-triggered section reveals.
+- Subtle parallax effects.
+- Premium hover interactions.
+- Image reveal animations.
+- Animated service cards.
+- Smooth navigation transitions.
+- Responsive mobile interactions.
+
+Keep animations elegant rather than excessive.
+
+Prioritize performance and accessibility.
+
+## 9. TECHNICAL REQUIREMENTS
+
+Before development:
+
+1. Inspect the complete existing project.
+2. Identify the framework and current architecture.
+3. Inspect all available assets, including logo images, videos, extracted frames and AI-generated images.
+4. Identify reusable components.
+5. Preserve existing working functionality.
+6. Prepare a clear implementation plan.
+
+Development requirements:
+
+- Fully responsive design.
+- Reusable components.
+- Clean and maintainable code.
+- Optimized images and videos.
+- Lazy loading where appropriate.
+- SEO-friendly structure.
+- Proper metadata.
+- Accessible navigation.
+- Fast loading.
+- Functional contact interactions.
+- Cross-browser compatibility.
+
+Do not introduce unnecessary dependencies.
+
+Do not delete existing project files or overwrite working components without understanding their purpose.
+
+## 10. RESPONSIVE DESIGN
+
+The website must work properly on:
+
+- Desktop computers.
+- Laptops.
+- Tablets.
+- Android phones.
+- iPhones.
+
+Mobile design must receive equal attention.
+
+Ensure:
+
+- Responsive typography.
+- Proper image scaling.
+- Touch-friendly buttons.
+- Mobile navigation.
+- Optimized video playback.
+- No horizontal overflow.
+
+## 11. FINAL QUALITY EXPECTATIONS
+
+The final website should feel like a professional event production company's digital identity.
+
+The design should communicate:
+
+**Professionalism + Technology + Creativity + Reliability.**
+
+Avoid:
+
+- Generic business templates.
+- Excessive animations.
+- Unnecessary AI-generated content.
+- Fake customer reviews.
+- Invented business information.
+- Broken links.
+- Non-functional buttons.
+- Unoptimized videos.
+- Inconsistent spacing.
+
+## 12. DEVELOPMENT WORKFLOW
+
+Work in the following phases:
+
+**Phase 1:** Inspect the existing project and assets.
+
+**Phase 2:** Establish the website design system and complete page structure.
+
+**Phase 3:** Implement the 2-second pixelated logo introduction.
+
+**Phase 4:** Build the homepage and hero video experience.
+
+**Phase 5:** Develop About, Services, Equipment, Gallery and Contact sections.
+
+**Phase 6:** Implement responsive layouts and animations.
+
+**Phase 7:** Test all navigation, interactions, forms and media.
+
+**Phase 8:** Optimize performance, SEO and mobile experience.
+
+After each phase, verify that existing functionality remains intact.
+
+Do not stop after creating a visual mockup. Build the actual functional website.
+
+### FINAL INSTRUCTION
+
+Think like a senior UI/UX designer, creative director and professional frontend developer.
+
+The final result must be a premium, cinematic, business-focused website that makes potential customers confident about choosing this company for their events.
+
+Prioritize the actual business identity, supplied logo, real equipment, real event visuals and professional presentation.
+
+Start by inspecting the existing project and providing a brief implementation plan before modifying files.
