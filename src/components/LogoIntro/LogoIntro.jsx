@@ -6,6 +6,7 @@ const LogoIntro = ({ onComplete }) => {
   const [showText, setShowText] = useState(false)
   const [fadeOut, setFadeOut] = useState(false)
   const animFrameRef = useRef(null)
+  const textShownRef = useRef(false)
 
   useEffect(() => {
     const canvas = canvasRef.current
@@ -14,7 +15,6 @@ const LogoIntro = ({ onComplete }) => {
     logo.src = `${import.meta.env.BASE_URL}logo.png`
 
     logo.onload = () => {
-      setShowText(true)
       const dpr = Math.min(window.devicePixelRatio || 1, 2)
       const vw = window.innerWidth
       const vh = window.innerHeight
@@ -103,6 +103,11 @@ const LogoIntro = ({ onComplete }) => {
         const elapsed = now - startTime
         ctx.clearRect(0, 0, vw, vh)
 
+        if (elapsed >= 900 && !textShownRef.current) {
+          textShownRef.current = true
+          setShowText(true)
+        }
+
         if (elapsed < ASSEMBLE_END) {
           // Phase 1 — pixels fly in and assemble into the M
           const prog = elapsed / ASSEMBLE_END
@@ -122,7 +127,7 @@ const LogoIntro = ({ onComplete }) => {
           })
           ctx.globalAlpha = 1
         } else if (elapsed < HOLD_END) {
-          // Phase 2 — full M with soft white glow
+          // Phase 2 — full logo mark with soft white glow
           const glow = Math.min(1, (elapsed - ASSEMBLE_END) / 400)
           const g = ctx.createRadialGradient(centerX, centerY, size * 0.15, centerX, centerY, size * 0.85)
           g.addColorStop(0, `rgba(255,255,255,${0.10 * glow})`)
