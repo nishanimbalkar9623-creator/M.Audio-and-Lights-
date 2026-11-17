@@ -61,6 +61,23 @@
 
 @media (max-width: 768px) {
   .about__highlights {
+    flex-direction: column;
+    align-items: stretch;
     gap: 24px;
+    margin-top: 36px;
+  }
+
+  .about__highlight {
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .about__highlight-number {
+    font-size: 2rem;
+    overflow-wrap: anywhere;
+  }
+
+  .about__highlight-label {
+    font-size: 0.7rem;
   }
 }

@@ -79,11 +79,11 @@
   position: absolute;
   bottom: 22%;
   left: 0;
-  width: 100%;
+  right: 0;
+  width: auto;
   padding: 0 40px;
   max-width: var(--max-width);
-  left: 50%;
-  transform: translateX(-50%);
+  margin: 0 auto;
   z-index: 3;
 }
 
@@ -174,8 +174,28 @@
     padding: 0 24px;
   }
 
+  .hero__label {
+    max-width: 100%;
+    font-size: 0.6rem;
+    letter-spacing: 3px;
+    line-height: 1.5;
+  }
+
+  .hero__title {
+    font-size: clamp(2.6rem, 12vw, 4.5rem);
+    letter-spacing: 1px;
+    overflow-wrap: anywhere;
+  }
+
+  .hero__subtitle {
+    max-width: 100%;
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+
   .hero__ctas {
     flex-direction: column;
+    align-items: flex-start;
   }
 
   .hero__scroll-indicator span {
