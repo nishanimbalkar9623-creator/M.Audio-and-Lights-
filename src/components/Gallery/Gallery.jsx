@@ -2,19 +2,21 @@ import { useRef, useState } from 'react'
 import { motion, useInView, AnimatePresence } from 'framer-motion'
 import './Gallery.css'
 
+const assetUrl = (path) => `${import.meta.env.BASE_URL}${path}`
+
 const galleryItems = [
-  { src: '/frames/frame_001.png', title: 'Corporate Conference' },
-  { src: '/frames/frame_004.png', title: 'Navratri Celebration' },
-  { src: '/frames/frame_006.png', title: 'Pre-Wedding Function' },
-  { src: '/frames/frame_009.png', title: 'Live Concert' },
-  { src: '/frames/frame_011.png', title: 'Stage Lighting Setup' },
-  { src: '/frames/frame_013.png', title: 'Ganesh Festival Event' },
-  { src: '/frames/frame_016.png', title: 'Corporate Seminar' },
-  { src: '/frames/frame_019.png', title: 'Wedding Reception' },
-  { src: '/frames/frame_021.png', title: 'Music Festival' },
-  { src: '/frames/frame_024.png', title: 'LED Wall Installation' },
-  { src: '/frames/frame_027.png', title: 'Sound System Setup' },
-  { src: '/frames/frame_029.png', title: 'Outdoor Event' },
+  { src: assetUrl('frames/frame_001.png'), title: 'Corporate Conference' },
+  { src: assetUrl('frames/frame_004.png'), title: 'Navratri Celebration' },
+  { src: assetUrl('frames/frame_006.png'), title: 'Pre-Wedding Function' },
+  { src: assetUrl('frames/frame_009.png'), title: 'Live Concert' },
+  { src: assetUrl('frames/frame_011.png'), title: 'Stage Lighting Setup' },
+  { src: assetUrl('frames/frame_013.png'), title: 'Ganesh Festival Event' },
+  { src: assetUrl('frames/frame_016.png'), title: 'Corporate Seminar' },
+  { src: assetUrl('frames/frame_019.png'), title: 'Wedding Reception' },
+  { src: assetUrl('frames/frame_021.png'), title: 'Music Festival' },
+  { src: assetUrl('frames/frame_024.png'), title: 'LED Wall Installation' },
+  { src: assetUrl('frames/frame_027.png'), title: 'Sound System Setup' },
+  { src: assetUrl('frames/frame_029.png'), title: 'Outdoor Event' },
 ]
 
 const Gallery = () => {

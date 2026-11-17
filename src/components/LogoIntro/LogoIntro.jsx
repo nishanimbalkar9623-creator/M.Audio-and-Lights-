@@ -17,7 +17,7 @@ const LogoIntro = ({ onComplete }) => {
     const canvas = canvasRef.current
     const ctx = canvas.getContext('2d')
     const logo = new Image()
-    logo.src = '/logo.png'
+    logo.src = `${import.meta.env.BASE_URL}logo.png`
 
     logo.onload = () => {
       const dpr = Math.min(window.devicePixelRatio || 1, 2)

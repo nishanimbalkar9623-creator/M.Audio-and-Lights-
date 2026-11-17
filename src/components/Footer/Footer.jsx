@@ -16,7 +16,7 @@ const Footer = () => {
         <div className="footer__grid">
           <div className="footer__brand">
             <div className="footer__logo-row">
-              <img src="/logo.png" alt="Audio & Lights" className="footer__logo" />
+              <img src={`${import.meta.env.BASE_URL}logo.png`} alt="Audio & Lights" className="footer__logo" />
               <div>
                 <h3 className="footer__name">AUDIO &amp; LIGHTS</h3>
                 <span className="footer__tagline">Professional Event Production</span>

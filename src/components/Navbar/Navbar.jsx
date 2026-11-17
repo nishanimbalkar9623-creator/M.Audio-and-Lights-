@@ -35,7 +35,7 @@ const Navbar = ({ activeSection }) => {
     <nav className={`navbar ${scrolled ? 'navbar--scrolled' : ''}`}>
       <div className="navbar__inner">
         <a href="#home" className="navbar__brand" onClick={(e) => { e.preventDefault(); handleClick('home') }}>
-          <img src="/logo.png" alt="Audio & Lights" className="navbar__logo" />
+          <img src={`${import.meta.env.BASE_URL}logo.png`} alt="Audio & Lights" className="navbar__logo" />
           <div className="navbar__brand-text">
             <span className="navbar__name">AUDIO &amp; LIGHTS</span>
           </div>

@@ -21,7 +21,7 @@ const Hero = () => {
     for (let i = 1; i <= TOTAL_FRAMES; i++) {
       const img = new Image()
       const num = String(i).padStart(3, '0')
-      img.src = `/frames/frame_${num}.png`
+      img.src = `${import.meta.env.BASE_URL}frames/frame_${num}.png`
       img.onload = () => {
         loadedCount++
         if (loadedCount === TOTAL_FRAMES) {
