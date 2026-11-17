@@ -176,6 +176,11 @@ const LogoIntro = ({ onComplete }) => {
   return (
     <div className={`logo-intro ${fadeOut ? 'logo-intro--out' : ''}`}>
       <canvas ref={canvasRef} className="logo-intro__canvas" />
+      <img
+        src={`${import.meta.env.BASE_URL}logo.png`}
+        alt="Audio & Lights logo"
+        className={`logo-intro__brand-logo ${showText ? 'visible' : ''} ${fadeOut ? 'fade-out' : ''}`}
+      />
       <div className={`logo-intro__text ${showText ? 'visible' : ''} ${fadeOut ? 'fade-out' : ''}`}>
         <span className="logo-intro__company">AUDIO &amp; LIGHTS</span>
         <span className="logo-intro__tagline">Professional Event Production</span>

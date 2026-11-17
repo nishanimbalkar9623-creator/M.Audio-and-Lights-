@@ -20,6 +20,28 @@
   height: 100%;
 }
 
+.logo-intro__brand-logo {
+  position: absolute;
+  top: 31%;
+  width: clamp(110px, 20vw, 190px);
+  height: auto;
+  opacity: 0;
+  transform: scale(0.85);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+  z-index: 2;
+  image-rendering: pixelated;
+}
+
+.logo-intro__brand-logo.visible {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.logo-intro__brand-logo.fade-out {
+  opacity: 0;
+  transform: scale(1.05);
+}
+
 .logo-intro--out {
   transition: opacity 0.6s ease;
   opacity: 0;
@@ -66,6 +88,11 @@
 }
 
 @media (max-width: 768px) {
+  .logo-intro__brand-logo {
+    top: 29%;
+    width: 130px;
+  }
+
   .logo-intro__text {
     bottom: 25%;
     width: calc(100% - 32px);
