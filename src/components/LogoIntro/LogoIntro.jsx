@@ -3,6 +3,7 @@ import './LogoIntro.css'
 
 const LogoIntro = ({ onComplete }) => {
   const canvasRef = useRef(null)
+  const [showBrand, setShowBrand] = useState(false)
   const [fadeOut, setFadeOut] = useState(false)
   const animFrameRef = useRef(null)
 
@@ -84,7 +85,7 @@ const LogoIntro = ({ onComplete }) => {
       // ── Timeline in ms (total ~2.8s) ──
       const ASSEMBLE_END = 1800   // pixels assemble
       const HOLD_END = 2400       // completed M holds
-      const TOTAL = 2800          // clean fade to homepage
+      const TOTAL = 4000          // clean fade to homepage
 
       const startTime = performance.now()
 
@@ -100,6 +101,8 @@ const LogoIntro = ({ onComplete }) => {
       const animate = (now) => {
         const elapsed = now - startTime
         ctx.clearRect(0, 0, vw, vh)
+
+        if (elapsed >= 900) setShowBrand(true)
 
         if (elapsed < ASSEMBLE_END) {
           // Phase 1 — pixels fly in and assemble into the M
@@ -169,6 +172,10 @@ const LogoIntro = ({ onComplete }) => {
   return (
     <div className={`logo-intro ${fadeOut ? 'logo-intro--out' : ''}`}>
       <canvas ref={canvasRef} className="logo-intro__canvas" />
+      <div className={`logo-intro__brand ${showBrand ? 'visible' : ''} ${fadeOut ? 'fade-out' : ''}`}>
+        <img src={`${import.meta.env.BASE_URL}logo.png`} alt="" className="logo-intro__logo" />
+        <span className="logo-intro__company">AUDIO &amp; LIGHTS</span>
+      </div>
     </div>
   )
 }
