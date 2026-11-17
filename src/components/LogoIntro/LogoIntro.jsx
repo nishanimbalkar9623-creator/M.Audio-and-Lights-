@@ -3,10 +3,8 @@ import './LogoIntro.css'
 
 const LogoIntro = ({ onComplete }) => {
   const canvasRef = useRef(null)
-  const [showText, setShowText] = useState(false)
   const [fadeOut, setFadeOut] = useState(false)
   const animFrameRef = useRef(null)
-  const textShownRef = useRef(false)
 
   useEffect(() => {
     const canvas = canvasRef.current
@@ -83,10 +81,10 @@ const LogoIntro = ({ onComplete }) => {
         }
       }
 
-      // ── Timeline in ms (total ~4s) ──
-      const ASSEMBLE_END = 1400   // 0.0 - 1.4s pixels assemble
-      const HOLD_END = 3200       // 1.4 - 3.2s logo holds (text fades in)
-      const TOTAL = 4000          // 3.2 - 4.0s transition out
+      // ── Timeline in ms (total ~2.8s) ──
+      const ASSEMBLE_END = 1800   // pixels assemble
+      const HOLD_END = 2400       // completed M holds
+      const TOTAL = 2800          // clean fade to homepage
 
       const startTime = performance.now()
 
@@ -102,11 +100,6 @@ const LogoIntro = ({ onComplete }) => {
       const animate = (now) => {
         const elapsed = now - startTime
         ctx.clearRect(0, 0, vw, vh)
-
-        if (elapsed >= 900 && !textShownRef.current) {
-          textShownRef.current = true
-          setShowText(true)
-        }
 
         if (elapsed < ASSEMBLE_END) {
           // Phase 1 — pixels fly in and assemble into the M
@@ -176,15 +169,6 @@ const LogoIntro = ({ onComplete }) => {
   return (
     <div className={`logo-intro ${fadeOut ? 'logo-intro--out' : ''}`}>
       <canvas ref={canvasRef} className="logo-intro__canvas" />
-      <img
-        src={`${import.meta.env.BASE_URL}logo.png`}
-        alt="Audio & Lights logo"
-        className={`logo-intro__brand-logo ${showText ? 'visible' : ''} ${fadeOut ? 'fade-out' : ''}`}
-      />
-      <div className={`logo-intro__text ${showText ? 'visible' : ''} ${fadeOut ? 'fade-out' : ''}`}>
-        <span className="logo-intro__company">AUDIO &amp; LIGHTS</span>
-        <span className="logo-intro__tagline">Professional Event Production</span>
-      </div>
     </div>
   )
 }
